@@ -1,0 +1,5 @@
+[user]
+	email = cyuanli@users.noreply.github.com
+	name = Cliff Yuan Li
+[core]
+	editor = nvim -f

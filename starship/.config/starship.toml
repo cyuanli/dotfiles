@@ -1,0 +1,99 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+palette = 'nord'
+add_newline = false
+
+format = """
+[░▒▓](nord10)\
+$os$username$hostname\
+[ ](bg:nord10)[](bg:nord9 fg:nord10)\
+$directory\
+[](fg:nord9 bg:nord8)\
+$git_branch$git_status\
+$character\
+"""
+
+[os]
+style = "bg:nord10 fg:nord4"
+format = '[ $symbol ]($style)'
+disabled = false
+
+[username]
+show_always = false
+style_user = "bg:nord10 fg:nord4"
+style_root = "bg:nord10 fg:nord12"
+format = '[$user]($style)'
+disabled = false
+
+[hostname]
+style = "bg:nord10 fg:nord4"
+ssh_only = true
+ssh_symbol = ' 🌐'
+format = '[@$hostname$ssh_symbol]($style)'
+disabled = false
+
+[directory]
+style = "bg:nord9 fg:nord4"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙"
+"Downloads" = ""
+"Music" = ""
+"Pictures" = ""
+
+[character]
+success_symbol = '[](bg:nord14 fg:nord8)[](nord14)'
+error_symbol = '[](bg:nord11 fg:nord8)[](nord11)'
+
+[git_branch]
+symbol = ""
+style = "bg:nord8 fg:nord4"
+format = '[ $symbol $branch ]($style)'
+
+[git_status]
+style = "bg:nord8 fg:nord4"
+format = '[$all_status$ahead_behind ]($style)'
+
+[os.symbols]
+Windows = ""
+Ubuntu = "󰕈"
+SUSE = ""
+Raspbian = "󰐿"
+Mint = "󰣭"
+Macos = "󰀵"
+Manjaro = ""
+Linux = "󰌽"
+Gentoo = "󰣨"
+Fedora = "󰣛"
+Alpine = ""
+Amazon = ""
+Android = ""
+AOSC = ""
+Arch = "󰣇"
+Artix = "󰣇"
+CentOS = ""
+Debian = "󰣚"
+Redhat = "󱄛"
+RedHatEnterprise = "󱄛"
+Zorin = ""
+
+[palettes.nord]
+nord0 = "#2e3440"
+nord1 = "#3b4252"
+nord2 = "#434c5e"
+nord3 = "#4c566a"
+nord4 = "#d8dee9"
+nord5 = "#e5e9f0"
+nord6 = "#eceff4"
+nord7 = "#8fbcbb"
+nord8 = "#88c0d0"
+nord9 = "#81a1c1"
+nord10 = "#5e81ac"
+nord11 = "#bf616a"
+nord12 = "#d08770"
+nord13 = "#ebcb8b"
+nord14 = "#a3be8c"
+nord15 = "#b48ead"
