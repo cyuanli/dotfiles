@@ -10,6 +10,7 @@
 - [tpm](https://github.com/tmux-plugins/tpm) - Tmux Plugin Manager
 - [Git](https://git-scm.com/)
 - [Rust](https://rustup.rs/)
+- [nvm](https://github.com/nvm-sh/nvm)
 - [A Nerd Font](https://www.nerdfonts.com/)
 
 ## Installation
