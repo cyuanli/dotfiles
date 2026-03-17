@@ -13,6 +13,8 @@ $git_branch$git_status\
 $character\
 """
 
+right_format = """$cmd_duration$time"""
+
 [os]
 style = "bg:nord10 fg:nord4"
 format = '[ $symbol ]($style)'
@@ -57,6 +59,20 @@ format = '[ $symbol $branch ]($style)'
 style = "bg:nord8 fg:nord4"
 format = '[$all_status$ahead_behind ]($style)'
 
+[cmd_duration]
+disabled = false
+show_milliseconds = true
+format = "[  $duration]($style)"
+style = "nord9"
+show_notifications = true
+
+[time]
+disabled = false
+format = "[  $time]($style)"
+time_format = "%R"
+utc_time_offset = "local"
+style = "nord10"
+
 [os.symbols]
 Windows = ""
 Ubuntu = "󰕈"
@@ -74,6 +90,7 @@ Android = ""
 AOSC = ""
 Arch = "󰣇"
 Artix = "󰣇"
+CachyOS = "󰣇"
 CentOS = ""
 Debian = "󰣚"
 Redhat = "󱄛"
