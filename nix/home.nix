@@ -7,10 +7,12 @@ in {
   home.stateVersion = "25.11";
 
   home.packages = [
-    pkgs.git
+    pkgs.gcc
+    pkgs.htop
     pkgs.neovim
     pkgs.starship
     pkgs.tmux
+    pkgs.tree-sitter
   ];
 
   home.file = {
