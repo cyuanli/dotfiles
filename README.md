@@ -18,7 +18,8 @@ Install [Nix](https://nixos.org/download/), then:
 
 ```sh
 git clone --recurse-submodules https://github.com/cyuanli/dotfiles.git ~/dev/dotfiles
-nix run home-manager/master -- switch --flake ~/dev/dotfiles/nix#cyl
+mkdir -p ~/.config/nix && echo "experimental-features = nix-command flakes" >> ~/.config/nix/nix.conf
+nix run home-manager/master -- switch -b backup --flake ~/dev/dotfiles/nix#cyl
 ```
 
 Dotfile changes take effect immediately, no need to re-run `home-manager switch` after editing a config file.
