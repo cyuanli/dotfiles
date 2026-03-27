@@ -13,6 +13,8 @@ in {
     pkgs.starship
     pkgs.tmux
     pkgs.tree-sitter
+    pkgs.yazi
+    pkgs.zoxide
   ];
 
   home.file = {
