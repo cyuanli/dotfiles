@@ -1,3 +1,9 @@
+bindkey "^[[3~"   delete-char
+bindkey "^[[1;5C" forward-word
+bindkey "^[[1;5D" backward-word
+bindkey "^[[3;5~" kill-word
+bindkey "^H"      backward-kill-word
+
 HISTFILE=$HOME/.zsh_history
 HISTFILESIZE=1000000
 HISTSIZE=100000
