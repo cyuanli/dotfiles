@@ -7,7 +7,6 @@ in {
   home.stateVersion = "25.11";
 
   home.packages = [
-    pkgs.gcc
     pkgs.htop
     pkgs.neovim
     pkgs.starship
