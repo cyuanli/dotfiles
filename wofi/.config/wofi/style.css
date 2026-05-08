@@ -1,0 +1,20 @@
+window {
+  background: #eceff4;
+  color: #2e3440;
+}
+
+#input {
+  background: #e5e9f0;
+  color: #2e3440;
+  margin: 8px;
+  padding: 8px;
+  border: none;
+}
+
+#entry:selected {
+  background: #d8dee9;
+}
+
+#text:selected {
+  color: #2e3440;
+}

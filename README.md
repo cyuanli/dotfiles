@@ -31,5 +31,5 @@ Install [GNU Stow](https://www.gnu.org/software/stow/), [Neovim](https://neovim.
 ```sh
 git clone --recurse-submodules https://github.com/cyuanli/dotfiles.git <path>
 cd <path>
-stow -v -t ~ bash git tmux ghostty nvim starship
+stow -v -t ~ bash git tmux ghostty nvim starship zsh alacritty mako sway waybar wofi
 ```

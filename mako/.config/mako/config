@@ -1,0 +1,24 @@
+# Appearance
+background-color=#3b4252
+text-color=#eceff4
+border-color=#88c0d0
+border-radius=8
+border-size=2
+padding=12
+margin=10
+font=Sans 11
+width=320
+
+# Behaviour
+default-timeout=5000
+ignore-timeout=0
+
+# Low urgency — shorter timeout, green accent
+[urgency=low]
+border-color=#a3be8c
+default-timeout=3000
+
+# Critical — never expires, red accent
+[urgency=critical]
+border-color=#bf616a
+default-timeout=0
