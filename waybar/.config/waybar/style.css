@@ -1,73 +1,160 @@
+/* Nord palette — kept in sync with sway config */
+@define-color nord0  #2e3440;
+@define-color nord1  #3b4252;
+@define-color nord2  #434c5e;
+@define-color nord3  #4c566a;
+@define-color nord4  #d8dee9;
+@define-color nord5  #e5e9f0;
+@define-color nord6  #eceff4;
+@define-color nord7  #8fbcbb;
+@define-color nord8  #88c0d0;
+@define-color nord9  #81a1c1;
+@define-color nord10 #5e81ac;
+@define-color nord11 #bf616a;
+@define-color nord13 #ebcb8b;
+@define-color nord14 #a3be8c;
+
 * {
     border: none;
     border-radius: 0;
-    font-family: Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Hack Nerd Font", "Noto Sans", sans-serif;
     font-size: 13px;
     min-height: 0;
 }
 
 window#waybar {
-    background: rgba(43, 48, 59, 0.5);
-    border-bottom: 3px solid rgba(100, 114, 125, 0.5);
-    color: white;
+    background: rgba(46, 52, 64, 0.85);
+    color: @nord4;
+    transition-property: background-color;
+    transition-duration: 0.2s;
 }
 
 tooltip {
-  background: rgba(43, 48, 59, 0.5);
-  border: 1px solid rgba(100, 114, 125, 0.5);
+    background: @nord0;
+    border: 1px solid @nord3;
+    border-radius: 4px;
 }
+
 tooltip label {
-  color: white;
+    color: @nord4;
+    padding: 4px;
+}
+
+/* Generic module padding */
+#workspaces,
+#window,
+#pulseaudio,
+#network,
+#battery,
+#keyboard-state,
+#language,
+#tray,
+#clock,
+#custom-power {
+    padding: 0 10px;
+    margin: 2px 2px;
+    color: @nord4;
+    background: transparent;
+}
+
+/* Workspaces */
+#workspaces {
+    padding: 0 4px;
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 8px;
+    margin: 2px 2px;
+    color: @nord4;
     background: transparent;
-    color: white;
-    border-bottom: 3px solid transparent;
+    border-bottom: 2px solid transparent;
+}
+
+#workspaces button:hover {
+    background: @nord1;
+    box-shadow: none;
+    text-shadow: none;
 }
 
 #workspaces button.focused {
-    background: #64727D;
-    border-bottom: 3px solid white;
+    color: @nord0;
+    background: @nord8;
+    border-bottom: 2px solid @nord10;
 }
 
-#mode, #clock, #battery {
-    padding: 0 10px;
+#workspaces button.urgent {
+    color: @nord6;
+    background: @nord11;
 }
 
-#mode {
-    background: #64727D;
-    border-bottom: 3px solid white;
+/* Center window title */
+#window {
+    color: @nord4;
+    font-style: italic;
 }
 
-#clock {
-    background-color: #64727D;
+/* Right-side modules */
+#pulseaudio.muted {
+    color: @nord3;
 }
 
-#battery {
-    background-color: #ffffff;
-    color: black;
+#network.disconnected {
+    color: @nord11;
 }
 
-#battery.charging {
-    color: white;
-    background-color: #26A65B;
+#battery.charging,
+#battery.plugged {
+    color: @nord14;
+}
+
+#battery.warning:not(.charging) {
+    color: @nord13;
+}
+
+#battery.critical:not(.charging) {
+    color: @nord11;
+    animation-name: blink;
+    animation-duration: 0.8s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
 }
 
 @keyframes blink {
     to {
-        background-color: #ffffff;
-        color: black;
+        color: @nord4;
     }
 }
 
-#battery.warning:not(.charging) {
-    background: #f53c3c;
-    color: white;
-    animation-name: blink;
-    animation-duration: 0.5s;
-    animation-timing-function: steps(12);
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+#keyboard-state {
+    color: @nord13;
+    padding: 0 6px;
+}
+
+#language {
+    color: @nord7;
+}
+
+#tray {
+    padding: 0 6px;
+}
+
+#tray > .needs-attention {
+    -gtk-icon-effect: highlight;
+}
+
+#clock {
+    color: @nord6;
+    font-weight: bold;
+}
+
+#custom-power {
+    color: @nord11;
+    padding: 0 12px 0 10px;
+    font-size: 14px;
+}
+
+#custom-power:hover {
+    color: @nord13;
+    background: @nord1;
 }
