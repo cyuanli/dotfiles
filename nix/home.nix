@@ -27,6 +27,7 @@ in {
     ".config/nvim".source           = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/nvim/.config/nvim";
     ".config/ghostty/config".source = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/ghostty/.config/ghostty/config";
     ".config/starship.toml".source  = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/starship/.config/starship.toml";
+    ".config/sway/config".source    = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/sway/.config/sway/config";
   };
 
   programs.home-manager.enable = true;
