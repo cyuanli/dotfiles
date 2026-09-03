@@ -1,6 +1,6 @@
 command = /usr/bin/zsh --login
-theme = Nord Light
+theme = Nord
 shell-integration-features = ssh-env,ssh-terminfo
 font-family = 
-font-size = 15
+font-size = 13
 background-opacity = 0.9
