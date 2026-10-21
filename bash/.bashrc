@@ -50,14 +50,10 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# yazi
-function y() {
-  local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-  command yazi "$@" --cwd-file="$tmp"
-  IFS= read -r -d '' cwd < "$tmp"
-  [ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
-  rm -f -- "$tmp"
-}
+# My neat functions
+if [ -f ~/.bash_functions ]; then
+    . ~/.bash_functions
+fi
 
 # neovim
 export PATH="$PATH:/opt/nvim-linux-x86_64/bin"

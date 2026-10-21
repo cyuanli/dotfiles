@@ -23,6 +23,7 @@ in {
     ".config/home-manager".source  = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/nix";
     ".bashrc".source               = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/bash/.bashrc";
     ".bash_aliases".source         = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/bash/.bash_aliases";
+    ".bash_functions".source       = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/bash/.bash_functions";
     ".zshrc".source                = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/zsh/.zshrc";
     ".zshenv".source               = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/zsh/.zshenv";
     ".gitconfig".source            = config.lib.file.mkOutOfStoreSymlink "${dotfiles}/git/.gitconfig";
