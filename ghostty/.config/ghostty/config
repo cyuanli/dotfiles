@@ -4,3 +4,5 @@ shell-integration-features = ssh-env,ssh-terminfo
 font-family = 
 font-size = 13
 background-opacity = 0.9
+clipboard-read = allow
+clipboard-write = allow
